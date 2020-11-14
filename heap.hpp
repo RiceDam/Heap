@@ -8,22 +8,21 @@
 #include <iostream>
 #include "patient.hpp"
 
-using namespace std;
-
 class heap {
 private:
-    vector<patient> patientVector;
+    std::vector<patient> patientVector;
     void heapify();
 public:
-    heap(vector<patient> v);
+    heap(std::vector<patient> v);
     void push(patient p);
     patient pop();
     int size();
     bool is_empty();
     void clear();
-    friend ostream &operator <<(ostream &output, const heap &h);
+    friend std::ostream &operator <<(std::ostream &output, const heap &h);
+    heap() = default;
 
-    vector<patient> getPatientVector() const;
+    std::vector<patient> getPatientVector() const;
 };
 
 

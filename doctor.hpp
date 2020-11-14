@@ -5,8 +5,14 @@
 #define HEAP_DOCTOR_HPP
 
 
+#include <string>
+
 class doctor {
-    
+private:
+    std::string name;
+public:
+    doctor(std::string n);
+    void treat();
 };
 
 

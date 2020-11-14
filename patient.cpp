@@ -27,3 +27,8 @@ std::ostream &operator<<(std::ostream &os, const patient &patient) {
 bool operator<(const patient &a, const patient &b) {
     return a.getPriority() < b.getPriority();
 }
+
+patient::patient(std::string n, int p) {
+    name = n;
+    priority = p;
+}

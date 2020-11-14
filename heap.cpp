@@ -7,7 +7,7 @@ void heap::heapify() {
     make_heap(patientVector.begin(), patientVector.end());
 }
 
-heap::heap(vector<patient> v) {
+heap::heap(std::vector<patient> v) {
     patientVector = v;
     heapify();
 }
@@ -42,13 +42,13 @@ void heap::clear() {
 
 
 
-ostream &operator<<(ostream &output, const heap &h) {
+std::ostream &operator<<(std::ostream &output, const heap &h) {
     for (int i = 0; i < h.getPatientVector().size(); i++) {
-        output << h.getPatientVector()[i] << endl;
+        output << h.getPatientVector()[i] << std::endl;
     }
     return output;
 }
 
-vector<patient> heap::getPatientVector() const{
-    return vector<patient>();
+std::vector<patient> heap::getPatientVector() const{
+    return patientVector;
 }

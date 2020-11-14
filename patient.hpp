@@ -11,6 +11,7 @@ private:
     std::string name;
     int priority;
 public:
+    patient(std::string n, int p);
     const std::string &getName() const;
     void setName(const std::string &name);
     int getPriority() const;

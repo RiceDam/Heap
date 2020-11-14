@@ -12,5 +12,5 @@ patient hospital::getPatient() {
 }
 
 void hospital::printPatient() {
-    std::cout << patientHeap;
+    std::cout << hospital::get_instance().patientHeap << std::endl;
 }
