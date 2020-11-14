@@ -7,18 +7,26 @@
 
 class hospital {
 public:
+    // gets the only instance of hospital
     static hospital& get_instance() {
         static hospital instance;
         return instance;
     };
 private:
+    // the heap that contains the patients
     heap patientHeap;
+    // sets constructor to default
     hospital() = default;
 public:
+    // deletes copy constructor
     hospital(hospital const &) = delete;
+    // deletes assignment operator
     void operator = (hospital const&) = delete;
+    // adds patient to heap
     void addPatient(patient p);
+    // gets the patient with the highest priority
     patient getPatient();
+    // prints all patients from the heap
     void printPatient();
 };
 

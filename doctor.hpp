@@ -9,9 +9,12 @@
 
 class doctor {
 private:
+    // name of the doctor
     std::string name;
 public:
+    // doctor constructor that sets the name to string n
     doctor(std::string n);
+    // method to treat a patient in the hospital
     void treat();
 };
 
