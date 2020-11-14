@@ -4,4 +4,4 @@ project(Heap)
 set(CMAKE_CXX_STANDARD 14)
 set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -Wextra -pedantic -std=c++14")
 
-add_executable(Heap main.cpp)
+add_executable(Heap main.cpp heap.cpp heap.hpp patient.cpp patient.hpp hospital.cpp hospital.hpp doctor.cpp doctor.hpp)
